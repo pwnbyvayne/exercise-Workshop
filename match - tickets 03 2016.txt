@@ -1,0 +1,173 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace testing
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double Buget = double.Parse(Console.ReadLine());
+            string category = Console.ReadLine().ToLower();
+            int peopleInGroup = int.Parse(Console.ReadLine());
+
+            string vip = "vip";
+            string normal = "normal";
+            double transport = 0.0;
+            double moneyLeft = 0.0;
+            double vipPlace = 499.99;
+            double normalPlace = 249.99;
+            double balance = 0.0;
+
+            if (peopleInGroup >= 1 && peopleInGroup <= 4)
+            {
+                transport = Buget * 0.75;
+                moneyLeft = Buget - transport;
+                if (category == vip)
+                {
+                    balance = moneyLeft - (peopleInGroup * vipPlace);
+                    if (balance >= 0)
+                    {
+                        Console.WriteLine($"Yes! You have {(balance).ToString("F")} leva left.");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Not enough money! You need {Math.Abs(balance).ToString("F")} leva.");
+                    }
+                }
+                else if (category == normal)
+                {
+                    balance = moneyLeft - (peopleInGroup * normalPlace);
+                    if (balance >= 0)
+                    {
+                        Console.WriteLine($"Yes! You have {(balance).ToString("F")} leva left.");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Not enough money! You need {Math.Abs(balance).ToString("F")} leva.");
+                    }
+                }
+            }
+            else if (peopleInGroup >= 5 && peopleInGroup <= 9)
+            {
+                transport = Buget * 0.60;
+                moneyLeft = Buget - transport;
+                if (category == vip)
+                {
+                    balance = moneyLeft - (peopleInGroup * vipPlace);
+                    if (balance >= 0)
+                    {
+                        Console.WriteLine($"Yes! You have {(balance).ToString("F")} leva left.");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Not enough money! You need {Math.Abs(balance).ToString("F")} leva.");
+                    }
+                }
+                else if (category == normal)
+                {
+                    balance = moneyLeft - (peopleInGroup * normalPlace);
+                    if (balance >= 0)
+                    {
+                        Console.WriteLine($"Yes! You have {(balance).ToString("F")} leva left.");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Not enough money! You need {Math.Abs(balance).ToString("F")} leva.");
+                    }
+                }
+            }
+            else if (peopleInGroup >= 10 && peopleInGroup <= 24)
+            {
+                transport = Buget * 0.50;
+                moneyLeft = Buget - transport;
+                if (category == vip)
+                {
+                    balance = moneyLeft - (peopleInGroup * vipPlace);
+                    if (balance >= 0)
+                    {
+                        Console.WriteLine($"Yes! You have {(balance).ToString("F")} leva left.");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Not enough money! You need {Math.Abs(balance).ToString("F")} leva.");
+                    }
+                }
+                else if (category == normal)
+                {
+                    balance = moneyLeft - (peopleInGroup * normalPlace);
+                    if (balance >= 0)
+                    {
+                        Console.WriteLine($"Yes! You have {(balance).ToString("F")} leva left.");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Not enough money! You need {Math.Abs(balance).ToString("F")} leva.");
+                    }
+                }
+            }
+            else if (peopleInGroup >= 25 && peopleInGroup <= 49)
+            {
+                transport = Buget * 0.40;
+                moneyLeft = Buget - transport;
+                if (category == vip)
+                {
+                    balance = moneyLeft - (peopleInGroup * vipPlace);
+                    if (balance >= 0)
+                    {
+                        Console.WriteLine($"Yes! You have {(balance).ToString("F")} leva left.");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Not enough money! You need {Math.Abs(balance).ToString("F")} leva.");
+                    }
+                }
+                else if (category == normal)
+                {
+                    balance = moneyLeft - (peopleInGroup * normalPlace);
+                    if (balance >= 0)
+                    {
+                        Console.WriteLine($"Yes! You have {(balance).ToString("F")} leva left.");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Not enough money! You need {Math.Abs(balance).ToString("F")} leva.");
+                    }
+                }
+            }
+            else
+            {
+                transport = Buget * 0.25;
+                moneyLeft = Buget - transport;
+                if (category == vip)
+                {
+                    balance = moneyLeft - (peopleInGroup * vipPlace);
+                    if (balance >= 0)
+                    {
+                        Console.WriteLine($"Yes! You have {(balance).ToString("F")} leva left.");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Not enough money! You need {Math.Abs(balance).ToString("F")} leva.");
+                    }
+                }
+                else if (category == normal)
+                {
+                    balance = moneyLeft - (peopleInGroup * normalPlace);
+                    if (balance >= 0)
+                    {
+                        Console.WriteLine($"Yes! You have {(balance).ToString("F")} leva left.");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Not enough money! You need {Math.Abs(balance).ToString("F")} leva.");
+                    }
+                }
+
+            }
+        }
+    }
+}

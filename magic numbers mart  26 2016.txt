@@ -1,0 +1,43 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace TASTING2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int magic = int.Parse(Console.ReadLine());
+            for (int d1 = 1; d1 <= 10; d1++)
+            {
+                for (int d2 = 1; d2 <= 10; d2++)
+                {
+                    for (int d3 = 1; d3 <= 10; d3++)
+                    {
+                        for (int d4 = 1; d4 <= 10; d4++)
+                        {
+                            for (int d5 = 1; d5 <= 10; d5++)
+                            {
+                                for (int d6 = 1; d6 <= 10; d6++)
+                                {
+                                    if (d1 * d2 * d3 * d4 * d5 * d6 == magic)
+                                    {
+                                        Console.Write($"{d1}{d2}{d3}{d4}{d5}{d6} ");
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+
+
+
+
+        }
+    }
+}

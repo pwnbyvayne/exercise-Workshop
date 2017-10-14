@@ -1,0 +1,49 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace TASTING2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            double moneyHeGot = double.Parse(Console.ReadLine());
+            int yearHeWillLife = int.Parse(Console.ReadLine());
+            int age = 17;
+            double moneySpend = 0;
+
+            for (int i = 1800; i <= yearHeWillLife; i++)
+            {
+                age++;
+
+                if ( i % 2 ==0)
+                {
+                    moneySpend += 12000;
+                }
+                else
+                {
+                    moneySpend += 12000 + (50 * age);
+                }
+
+            }
+
+             if ( moneySpend <= moneyHeGot)
+            {
+                Console.WriteLine($"Yes! He will live a carefree life and will have {(moneyHeGot - moneySpend).ToString("F")} dollars left.");
+            }
+             else
+            {
+                Console.WriteLine($"He will need {Math.Abs(moneyHeGot-moneySpend).ToString("F")} dollars to survive.");
+            }
+
+
+
+
+        }
+
+    }
+}

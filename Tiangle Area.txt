@@ -1,0 +1,27 @@
+using System.Diagnostics.CodeAnalysis;
+using System.Runtime.InteropServices;
+using System.Xml;
+
+namespace tech_module___ex_1
+{
+
+    using System;
+    class Program
+    {
+
+        static void Main()
+        {
+            double side = double.Parse(Console.ReadLine());
+            double hight = double.Parse(Console.ReadLine());
+            double area = TriangleArea(side, hight);
+            Console.WriteLine($"The area of the triangle is {(area):f2}");
+
+        }
+
+        static double TriangleArea(double a , double b)
+        {
+            double area = (a * b) / 2;
+            return area;
+        }
+    }
+}

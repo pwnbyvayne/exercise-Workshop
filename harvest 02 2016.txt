@@ -1,0 +1,39 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace testing
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int ploshtNaLozeto = int.Parse(Console.ReadLine());
+            double gronzeOtKwMetur = double.Parse(Console.ReadLine());
+            int nujniLitriVino = int.Parse(Console.ReadLine());
+            int broqRabotnici = int.Parse(Console.ReadLine());
+
+            double ploshIzpolzvanaZaVino = ploshtNaLozeto * 0.40;
+
+            double wineInLitters = (ploshIzpolzvanaZaVino * gronzeOtKwMetur) / 2.5;
+            double littersLeft = wineInLitters - nujniLitriVino;
+            double wineForWorkers = littersLeft / broqRabotnici;
+            double wineNeeded = nujniLitriVino - wineInLitters;
+
+
+            if (wineInLitters >= nujniLitriVino)
+            {
+                Console.WriteLine($"Good harvest this year! Total wine: {Math.Floor(wineInLitters)} liters.");
+                Console.WriteLine($"{Math.Ceiling(littersLeft)} liters left -> {Math.Ceiling(wineForWorkers)} liters per person.");
+
+            }
+             else
+            {    
+                Console.WriteLine($"It will be a tough winter! More {Math.Floor(wineNeeded)} liters wine needed.");
+            }
+
+        }
+    }
+}

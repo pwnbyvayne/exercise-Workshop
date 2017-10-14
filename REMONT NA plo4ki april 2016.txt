@@ -1,0 +1,36 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace TASTING2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            int n = int.Parse(Console.ReadLine());
+            double w = double.Parse(Console.ReadLine());
+            double l = double.Parse(Console.ReadLine());
+            int m = int.Parse(Console.ReadLine());
+            int o = int.Parse(Console.ReadLine());
+
+
+            int liceNaPloshtatkata = n * n;
+            double liceNaPlochkata = w * l;
+            int LiceNaPeikata = m * o;
+
+            int LiceNaPokrivane = liceNaPloshtatkata - LiceNaPeikata;
+            double trqbvashtiPlochki = LiceNaPokrivane / liceNaPlochkata;
+            double TimeNeeded = trqbvashtiPlochki * 0.2;
+            Console.WriteLine(trqbvashtiPlochki.ToString("F"));
+            Console.WriteLine(TimeNeeded.ToString("F"));
+
+
+
+
+        }
+    }
+}

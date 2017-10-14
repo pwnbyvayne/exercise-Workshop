@@ -1,0 +1,53 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace testing
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int n = int.Parse(Console.ReadLine());
+            string time = Console.ReadLine().ToLower();
+
+            string day = "day";
+            string night = "night";
+            double costOfTransport = 0.0;
+             
+            if(n < 20 && time == day)
+            {
+                
+                costOfTransport = n * 0.79;
+                costOfTransport += 0.70;
+                Console.WriteLine(costOfTransport);
+            }
+            else if(n < 20 && time == night)
+            {
+                
+                costOfTransport = n * 0.90;
+                costOfTransport += 0.70;
+                Console.WriteLine(costOfTransport);
+
+            }
+            else if (n >= 20 && n < 100)
+            {
+                costOfTransport = n * 0.09;
+                Console.WriteLine(costOfTransport);
+            }
+            else if (n >= 100)
+            {
+                costOfTransport = n * 0.06;
+                Console.WriteLine(costOfTransport);
+            }
+
+
+
+
+
+
+        }
+    }
+}

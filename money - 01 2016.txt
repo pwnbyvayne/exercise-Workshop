@@ -1,0 +1,36 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace testing
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int bitcointHeOwn = int.Parse(Console.ReadLine());
+            double chinaUan = double.Parse(Console.ReadLine());
+            double commision = double.Parse(Console.ReadLine());
+
+
+            double priceOfBitcoinInEuro = (bitcointHeOwn * 1168) / 1.95;
+            double priceOfChinaUanInEuro = ((chinaUan * 0.15) * 1.76) / 1.95;
+
+            double totalEuro = priceOfBitcoinInEuro + priceOfChinaUanInEuro;
+            double commisionInEuro = totalEuro * (commision / 100);
+            double totalEuroAfterCommision = totalEuro - commisionInEuro;
+
+            Console.WriteLine(totalEuroAfterCommision.ToString("F"));
+
+
+
+
+
+
+
+
+        }
+    }
+}

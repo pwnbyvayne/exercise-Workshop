@@ -1,0 +1,39 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace TASTING2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int weekendDays = int.Parse(Console.ReadLine());
+
+            int workDays = 365 - weekendDays;
+
+            int timeForPlay = (workDays * 63) + (weekendDays * 127);
+            int diffInTime = 30000 - timeForPlay;
+
+            var h = diffInTime / 60;
+            var m = diffInTime % 60;
+
+
+            if ( timeForPlay >= 30000)
+            {
+                Console.WriteLine("Tom will run away");
+                Console.WriteLine($"{Math.Abs(h)} hours and {Math.Abs(m)} minutes more for play");
+            }
+            else
+            {
+                Console.WriteLine("Tom sleeps well");
+                Console.WriteLine($"{h} hours and {m} minutes less for play");
+            }
+
+
+
+        }
+    }
+}
